@@ -38,7 +38,7 @@ To run the project locally, follow these steps:
 
 ### Get the Server Repo
 
-# [Server repo](hhttps://github.com/dibyenduweb/tech-shop-server)
+ [Server repo](https://github.com/dibyenduweb/tech-shop-server)
 
 # Project Structure
 
