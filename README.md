@@ -50,6 +50,8 @@ To run the project locally, follow these steps:
    - The frontend is built with React and styled using Tailwind CSS, including components from DaisyUI.
    - The responsive design ensures a consistent and visually appealing experience across various devices.
 
-
+6. **Add tow new features**
+- add a social share button
+-add a sale coundown features
 
 
