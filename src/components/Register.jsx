@@ -4,6 +4,7 @@ import Header from "./Home/Header";
 import { FaEye,FaEyeSlash } from 'react-icons/fa';
 import useAuth from "../Hooks/useAuth";
 import toast from "react-hot-toast";
+import Container from "./Container/Container";
 
 
 const Register = () => {
@@ -79,7 +80,7 @@ const [regError, setRegError] = useState('');
     }
 
     return (
-      <>
+      <Container>
       <Header></Header>
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
@@ -145,8 +146,9 @@ const [regError, setRegError] = useState('');
             </div>
           </div>
         </div>
-      </div></>
+      </div></Container>
     );
 };
 
 export default Register;
+

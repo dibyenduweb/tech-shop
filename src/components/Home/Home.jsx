@@ -5,6 +5,8 @@ import Header from "./Header";
 import Brands from "../Section/Brands";
 import OurBrands from "../Section/OurBrands";
 import Subscribe from "../Section/Subscribe";
+import Container from "../Container/Container";
+
 
 
 const Home = () => {
@@ -12,6 +14,7 @@ const Home = () => {
     console.log(brandData);
     return (
         <>
+        <Container>
         <Header/>
         <div className="lg:h-[500px] relative text-white lg:bg-cover text-center py-44" style={{backgroundImage: 'url(https://i.ibb.co/yYbhvRL/Blue-Teal-Geometric-Technology-Linkdln-Banner.png)'}}>
               <h2 className="lg:text-6xl font-bold">Big fastival Offers</h2>
@@ -34,7 +37,7 @@ const Home = () => {
       <Subscribe/>
       <Footer/>
      
-            
+      </Container>
             </>
        
     );
