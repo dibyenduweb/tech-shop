@@ -29,13 +29,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        //loader: () => fetch(`https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/products`)
+        //loader: () => fetch(`https://tech-commerce-server.vercel.app/products`)
         loader: () => fetch('/logodata.json')
       },
       {
         path:"/brand/:brandName",
         element:<Shop></Shop>,
-        loader: ({params}) => fetch(`https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/products/${params.brandName}`)
+        loader: ({params}) => fetch(`https://tech-commerce-server.vercel.app/products/${params.brandName}`)
       },
       {
         path:"/",
@@ -49,18 +49,18 @@ const router = createBrowserRouter([
       {
         path:"/displayproduct",
         element:<PrivateRoute><Displayuser></Displayuser></PrivateRoute>,
-        loader: () => fetch(`https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/products`)
+        loader: () => fetch(`https://tech-commerce-server.vercel.app/products`)
       },
       {
         path:"/details/:id",
         element:<PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/product/${params.id}`)
+        loader: ({params}) => fetch(`https://tech-commerce-server.vercel.app/product/${params.id}`)
       },
       {
         path:"/cart",
         element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader:() =>fetch('https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/cart')
-        //loader:() =>fetch('https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/cart')
+        loader:() =>fetch('https://tech-commerce-server.vercel.app/cart')
+        //loader:() =>fetch('https://tech-commerce-server.vercel.app/cart')
 
   
       },
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute><Update></Update></PrivateRoute>,
         loader:({params}) =>{
           console.log(params)
-          return fetch(`https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/product/${params.id}`);
+          return fetch(`https://tech-commerce-server.vercel.app/product/${params.id}`);
         }
       },
       {

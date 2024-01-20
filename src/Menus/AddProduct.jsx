@@ -1,5 +1,6 @@
 import toast from "react-hot-toast";
 import Header from "../components/Home/Header";
+import Container from "../components/Container/Container";
 
 const AddProduct = () => {
 
@@ -27,7 +28,7 @@ const AddProduct = () => {
         };
         console.log(productData);
 
-    fetch("https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/products", {
+    fetch("https://tech-commerce-server.vercel.app/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,8 +48,10 @@ const AddProduct = () => {
     }
     return (
         <>
-    <Header/>
-        <div className="bg-slate-500 p-10">
+  
+     <Container>
+     <Header/>
+     <div className="bg-slate-500 p-10">
             <h1 className='text-4xl text-center font-bold my-'>Add <span className='text-sky-500'>Product</span></h1>
         <form  onSubmit={handleAddProduct} className="max-w-md mx-auto" >
       <div className="mb-4">
@@ -146,6 +149,7 @@ const AddProduct = () => {
 
 
         </div>
+     </Container>
         </>
         
     );

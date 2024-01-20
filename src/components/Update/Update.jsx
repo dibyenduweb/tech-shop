@@ -32,7 +32,7 @@ const Update = () => {
         };
         console.log(updateData);
 
-        fetch(`https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/products/${singleData._id}`,{
+        fetch(`https://tech-commerce-server.vercel.app/products/${singleData._id}`,{
             method:"PUT",
             headers:{
                 "Content-Type": "application/json",

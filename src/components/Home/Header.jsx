@@ -75,9 +75,9 @@ const Header = () => {
         
        
       </div>
-      <div>
+      <div className='px-4'>
        
-        <button onClick={toggleTheme}>{ theme==='dark' ? <FiSun /> : <IoMoonOutline /> }</button>
+        <button className='text-2xl' onClick={toggleTheme}>{ theme==='dark' ? <FiSun/> : <IoMoonOutline /> }</button>
          
         </div>
   </div>

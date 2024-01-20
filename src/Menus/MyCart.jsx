@@ -6,14 +6,13 @@ import useAuth from '../Hooks/useAuth';
 
 const MyCart = () => {
   const [cartData, setCartData] = useState([]);
-
   const { user } = useAuth();
   const loginEmail = user.email;
 
   useEffect(() => {
     const fetchCartData = async () => {
       try {
-        const response = await fetch('https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/cart');
+        const response = await fetch('https://tech-commerce-server.vercel.app/cart');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -33,7 +32,7 @@ const MyCart = () => {
   };
 
   const handleDelete = (_id) => {
-    fetch(`https://tech-commerce-server-8tvfprqzl-dibyendu-pramaniks-projects.vercel.app/cart/${_id}`, {
+    fetch(`https://tech-commerce-server.vercel.app/cart/${_id}`, {
       method: 'DELETE',
     })
       .then((res) => {
@@ -59,12 +58,11 @@ const MyCart = () => {
   };
 
   return (
-    <>
+    <React.Fragment key="myCartFragment">
       <div>
         <Header />
         <div className="my-6 ml-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          {cartData.map((cart) => (
-            // Check if userEmail is the same as loginEmail
+          {Array.isArray(cartData) && cartData.length > 0 && cartData.map((cart) => (
             cart.userEmail === loginEmail && (
               <div key={cart._id} className='card bg-base-100 shadow-xl'>
                 <figure>
@@ -87,7 +85,7 @@ const MyCart = () => {
           ))}
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
