@@ -4,7 +4,7 @@ Welcome to the Tech-Shopping Project, a web application designed for tech enthus
 
 ## Live Demo
 
-Explore the live version of the project at [Demo Link](https://project-asiment-10.web.app).
+Explore the live version of the project at [Demo Link](https://tech-commerce.netlify.app/).
 
 ## Get the Server Repo
 
